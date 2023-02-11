@@ -2,6 +2,7 @@ import React from 'react'
 import mainBg from '/bg2.webp'
 import { motion } from 'framer-motion'
 import Card from "./components/Cards"
+import { useInView } from 'react-intersection-observer'
 
 const App = () => {
 
@@ -47,18 +48,18 @@ const App = () => {
                         <h1 className='font-sora text-4xl lg:w-[18rem] mt-6'>Be Secured with Alucard</h1>
                         <p className='opacity-70 text-[14px] mt-6 lg:max-w-[20rem] leading-8 tracking tracking-[.25em]'>ALUCARD IS AN INNOVATIVE MEME TOKEN PROJECT THAT OFFERS UNPRECEDENTED SECURITY AND UTILITIES FOR INVESTORS.</p>
                     </div>
-                    <div className='flex gap-x-5 w-full md:flex-row flex-col'>
-                        <div>
+                    <div className='flex gap-x-5 md:flex-row flex-col w-fit'>
+                        <motion.div>
                             <Card src="/util1.webp" title="AI Generator" desc="This project focuses on creating an Artificial Intelligence AI-driven image generator that produced Dark Themed images." />
-                        </div>
+                        </motion.div>
 
-                        <div className='mt-7'>
+                        <motion.div className='mt-7'>
                             <Card src="/uti2.webp" title="NFT Collections" desc="The ultimate utility offering users the ability to showcase, securely store, and trade their rare and valuable NFTs. and find other users to join in on their NFT trading adventures." />
-                        </div>
+                        </motion.div>
 
-                        <div className='mt-14'>
+                        <motion.div className='mt-14'>
                             <Card src="/util3.webp" title="Artwork Competition" desc="We seek to bring together artists, graphic designers, and digital enthusiasts of all skill levels to create or participate in online competitions and create beautiful, unique digital artwork." />
-                        </div>
+                        </motion.div>
 
                     </div>
                 </div>
